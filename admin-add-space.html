@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservou! - Adicionar Novo Espaço (Admin)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="admin-header">
+        <div class="admin-header-content container">
+            <a href="index.html" class="logo">Reservou!</a>
+            <span class="admin-title">Painel do Administrador</span>
+            <a href="#" class="admin-logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </a>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <section class="add-space-form-section">
+            <div class="container">
+                <h2>Adicionar Novo Espaço para Reserva</h2>
+                <form class="add-space-form">
+                    <div class="form-group">
+                        <label for="space-name">Nome do Espaço:</label>
+                        <input type="text" id="space-name" name="spaceName" placeholder="Ex: Salão de Festas Principal" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="space-description">Descrição Detalhada:</label>
+                        <textarea id="space-description" name="spaceDescription" rows="6" placeholder="Descreva as características do espaço, capacidade, etc." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="space-type">Tipo de Espaço:</label>
+                        <select id="space-type" name="spaceType" required>
+                            <option value="">Selecione o tipo</option>
+                            <option value="quadra">Quadra Esportiva</option>
+                            <option value="salao">Salão de Festas</option>
+                            <option value="piscina">Piscina</option>
+                            <option value="auditorio">Auditório</option>
+                            <option value="quiosque">Quiosque / Churrasqueira</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="space-capacity">Capacidade Máxima de Pessoas:</label>
+                        <input type="number" id="space-capacity" name="spaceCapacity" min="1" placeholder="Ex: 50" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="space-price">Preço por Período (Ex: 150.00 / Hora, 500.00 / 4h):</label>
+                        <input type="text" id="space-price" name="spacePrice" placeholder="Ex: 150.00 / Hora" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="space-image-url">URL da Imagem Principal:</label>
+                        <input type="url" id="space-image-url" name="spaceImageUrl" placeholder="https://exemplo.com/imagem-espaco.jpg" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="space-features">Recursos/Estrutura (separados por vírgula):</label>
+                        <input type="text" id="space-features" name="spaceFeatures" placeholder="Ex: Ar Condicionado, Cozinha Equipada, Wi-Fi">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Salvar Espaço</button>
+                        <button type="button" class="btn-secondary">Cancelar</button>
+                    </div>
+                </form>
+
+                <div id="feedback-message" class="feedback-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-col logo-col">
+                <a href="#" class="logo">Reservou!</a>
+                <p>Seu espaço perfeito para eventos e lazer, a um clique de distância.</p>
+            </div>
+
+            <div class="footer-col nav-col">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Nossos Espaços</a></li>
+                    <li><a href="#">Como Funciona</a></li>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Caxias do Sul, RS</p>
+                <p><i class="fas fa-phone"></i> (54) 99999-9999</p>
+                <p><i class="fas fa-envelope"></i> contato@reservou.com</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Reservou! Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
